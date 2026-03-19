@@ -1,0 +1,421 @@
+{
+  "date": "2026-03-23",
+  "label": "Segunda-feira, 23 de março",
+  "venues": [
+    {
+      "name": "PALCO CENTRO LESTE",
+      "address": "Rua Nunes Machado - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "14h", "timeEnd": null, "title": "CONCENTRAÇÃO CORTEJOS", "description": null, "curadoria": null, "origin": null, "type": "other", "price": null },
+        { "timeStart": "15h30", "timeEnd": null, "title": "GILBLOCO GIL", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": null },
+        { "timeStart": "16h15", "timeEnd": null, "title": "UNIDES DOS BLOQUINHOS", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": null },
+        { "timeStart": "17h", "timeEnd": null, "title": "AFRICATARINA", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": null },
+        { "timeStart": "17h45", "timeEnd": null, "title": "FILHAS E FILHES DE EVA NO JARDIM DAS DELÍCIAS", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": null },
+        { "timeStart": "18h30", "timeEnd": null, "title": "FANFARRA DA PONTE", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null }
+      ]
+    },
+    {
+      "name": "MIRAMAR",
+      "address": "Praça Fernando Machado, Av. Paulo Fontes, 458 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": null, "timeEnd": null, "title": "MARATONA VISUAL: EXPOSIÇÃO CORPORALIDADE", "description": "de Cazão, Lua Dorna, Nestor Varela, Maristela Müller e Mauricio Igor", "curadoria": "Francine Goudel", "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "11h", "timeEnd": null, "title": "CANTA, BORÓ!", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": null },
+        { "timeStart": "11h", "timeEnd": "18h", "title": "FEIRA MERCADO TIRADENTES", "description": null, "curadoria": null, "origin": null, "type": "other", "price": null },
+        { "timeStart": "11h", "timeEnd": "18h", "title": "FEIRA DA CULTURA JAPONESA", "description": null, "curadoria": null, "origin": null, "type": "other", "price": null },
+        { "timeStart": "14h", "timeEnd": null, "title": "TAIKÔ — SHIMADAIKO", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null }
+      ]
+    },
+    {
+      "name": "LARGO DA CATEDRAL",
+      "address": "Rua Padre Miguelino - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "9h30", "timeEnd": null, "title": "TOUR CULTURAL DESTERRO NEGRO: HISTÓRIAS E CULTURA", "description": "Ponto de partida: Catedral. Guia Raízes do Desterro. 40 vagas", "curadoria": null, "origin": null, "type": "other", "price": null },
+        { "timeStart": "14h40", "timeEnd": null, "title": "HASSIS — AINDA HÁ TEMPO...", "description": "Cia. de Dança UFSC", "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null },
+        { "timeStart": "15h", "timeEnd": null, "title": "TOMATE NA RUA", "description": "Palhaço Tomate", "curadoria": null, "origin": "ARG", "type": "performance", "price": null }
+      ]
+    },
+    {
+      "name": "TEATRO ÁLVARO DE CARVALHO - TAC",
+      "address": "Rua Mal. Guilherme, 26 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "15h", "timeEnd": null, "title": "O PEQUENO PRÍNCIPE", "description": "O Dromedário Loquaz", "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null },
+        { "timeStart": "21h", "timeEnd": null, "title": "DESAPEGO", "description": "Cia. Lápis de Seda", "curadoria": null, "origin": null, "type": "performance", "price": null }
+      ]
+    },
+    {
+      "name": "CASA DA LITERATURA CATARINENSE",
+      "address": "Praça XV de Novembro, 270 - Centro",
+      "classification": "14 anos",
+      "section": "principal",
+      "events": [
+        { "timeStart": "14h", "timeEnd": null, "title": "PALAVRA PERCUSSIVA", "description": "Consonante Duo", "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null }
+      ]
+    },
+    {
+      "name": "GALERIA MUNICIPAL DE ARTE PEDRO PAULO VECCHIETTI",
+      "address": "Praça XV de Novembro, 180 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "12h", "timeEnd": "18h", "title": "EXPOSIÇÃO SEIVA BRUTA", "description": "de João Vejam", "curadoria": "Francine Goudel", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "ARQUIVO HISTÓRICO DO MUNICÍPIO DE FLORIANÓPOLIS",
+      "address": "Praça XV de Novembro, 180 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "14h", "timeEnd": null, "title": "VISITA GUIADA", "description": "Horários: 14h, 15h30 e 17h. 15 pessoas por horário", "curadoria": null, "origin": null, "type": "other", "price": null }
+      ]
+    },
+    {
+      "name": "MEMORIAL MEYER FILHO",
+      "address": "Praça XV de Novembro, 180 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "12h", "timeEnd": "18h", "title": "EXPOSIÇÃO CAMAS SILENCIOSAS PARA PALAVRAS EM SUSPENSÃO", "description": "de Zans", "curadoria": "Kamilla Nunes", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "MUSEU VICTOR MEIRELLES",
+      "address": "Rua Victor Meirelles, 59 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "10h", "timeEnd": "18h", "title": "EXPOSIÇÃO SISTEMAS PARA PENSAR O SISTEMA", "description": "de Diego de los Campos", "curadoria": "Francine Goudel", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "MUSEU DE FLORIANÓPOLIS",
+      "address": "Praça XV de Novembro, 214 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "10h", "timeEnd": "16h", "title": "VISITAÇÃO GRATUITA AO MUSEU", "description": null, "curadoria": null, "origin": null, "type": "other", "price": null },
+        { "timeStart": "10h", "timeEnd": "16h", "title": "EXPOSIÇÃO TEMPORÁRIA BOI DE MAMÃO", "description": null, "curadoria": null, "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "10h", "timeEnd": "12h", "title": "PERCURSO GUIADO MULHERES QUE INSPIRAM", "description": "Com Guias Manezinhas", "curadoria": null, "origin": null, "type": "other", "price": null },
+        { "timeStart": "11h", "timeEnd": "12h", "title": "APRESENTAÇÃO PARTICIPATIVA DO BOI DE MAMÃO BOI CRIANÇA", "description": null, "curadoria": null, "origin": null, "type": "performance", "price": null },
+        { "timeStart": "14h", "timeEnd": "16h", "title": "OFICINA DE COSTURA FAÇA O SEU XILOBIXO!", "description": "20 vagas", "curadoria": null, "origin": null, "type": "workshop", "price": null }
+      ]
+    },
+    {
+      "name": "MUSEU HISTÓRICO DE SANTA CATARINA — PALÁCIO CRUZ E SOUSA",
+      "address": "Praça XV de Novembro, 227 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "10h", "timeEnd": "17h", "title": "EXPOSIÇÃO BICENTENÁRIO DE NASCIMENTO DE D. PEDRO II", "description": null, "curadoria": null, "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "10h", "timeEnd": "17h", "title": "EXPOSIÇÃO FEDERALISMO: A REVOLUÇÃO QUE ABALOU SC", "description": null, "curadoria": null, "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "10h", "timeEnd": "17h", "title": "EXPOSIÇÃO DO OUTRO LADO DO OCEANO: OS 150 ANOS DA GRANDE IMIGRAÇÃO ITALIANA EM SANTA CATARINA", "description": null, "curadoria": null, "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "10h", "timeEnd": "17h", "title": "EXPOSIÇÃO 200 ANOS DE ANITA GARIBALDI: VIDA, CORAGEM E PAIXÃO", "description": null, "curadoria": null, "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "GALERIA DE ARTE DO MERCADO PÚBLICO",
+      "address": "Sala José Cipriano da Silva - Rua Jerônimo Coelho, 60 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "12h", "timeEnd": "18h", "title": "EXPOSIÇÃO MEMÓRIAS VIVAS DO MAR", "description": "de Clarissa Herrig de Oliveira, Esteban Silva Montecinos e Alvaro Fiore", "curadoria": "Lucila Horn", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "FUNDAÇÃO CULTURAL BADESC",
+      "address": "Rua Visc. de Ouro Preto, 216 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "13h", "timeEnd": "19h", "title": "EXPOSIÇÃO DESENHOS DE UM REAL - 20 ANOS", "description": "de Diego de los Campos", "curadoria": null, "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "13h", "timeEnd": "19h", "title": "EXPOSIÇÃO ESTRANHAMENTO DO POSSÍVEL", "description": "de Karine Abbati", "curadoria": "Lívia Auler", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "MUSEU DA ESCOLA CATARINENSE - MESC",
+      "address": "Rua Saldanha Marinho, 196 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "10h", "timeEnd": "17h", "title": "EXPOSIÇÃO VIBRAÇÕES: A COLEÇÃO DE ARTES VISUAIS DO MESC", "description": null, "curadoria": null, "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "17h", "timeEnd": null, "title": "DESTERRAR", "description": "Adilso Machado", "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null }
+      ]
+    },
+    {
+      "name": "NÚCLEO DE ESTUDOS EM FOTOGRAFIA - NEFA",
+      "address": "Rua João Pinto, 30 - Sala 505 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "14h", "timeEnd": "18h", "title": "EXPOSIÇÃO COLETIVA IDENTIDADE: FOTOGRAFIA LATINO-AMERICANA", "description": null, "curadoria": "Laura Lavergne e Lucila Horn", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "HELENA FRETTA GALERIA DE ARTE",
+      "address": "Rua Presidente Coutinho, 532 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "11h", "timeEnd": "16h", "title": "EXPOSIÇÃO ARTE CATARINENSE: MEMÓRIA PRESERVADA", "description": null, "curadoria": null, "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "PONTE HERCÍLIO LUZ",
+      "address": "Cabeceira insular da ponte",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "15h30", "timeEnd": null, "title": "TOUR CULTURAL CENTENÁRIO DA PONTE HERCÍLIO LUZ", "description": "Ponto de partida: ao lado do palco, no Parque da Luz. Guia Manezinho. Sem limite de vagas", "curadoria": null, "origin": "Florianópolis/SC", "type": "other", "price": null }
+      ]
+    },
+    {
+      "name": "PARQUE DE COQUEIROS",
+      "address": "Av. Eng. Max de Souza, s/n - Coqueiros",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "16h", "timeEnd": null, "title": "EXTRAMBÓLICO", "description": "Dale Circo", "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null }
+      ]
+    },
+    {
+      "name": "RUA ÁLVARO DE CARVALHO",
+      "address": "Esquina com Felipe Schmidt - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "11h", "timeEnd": null, "title": "PINTURA MURAL", "description": "Tuane Ferreira", "curadoria": null, "origin": "Florianópolis/SC", "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "ESPAÇO CULTURAL AMIGOS DO PARQUE",
+      "address": "Rua Felipe Schmidt - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "14h", "timeEnd": "18h", "title": "EXPOSIÇÃO PARQUE DA LUZ, O FRUTO DA MOBILIZAÇÃO COMUNITÁRIA", "description": null, "curadoria": null, "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "SALA DE CINEMA GILBERTO GERLACH - CIC",
+      "address": "Centro Integrado de Cultura - Av. Gov. Irineu Bornhausen, 5600 - Agronômica",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "16h", "timeEnd": null, "title": "MOSTRA MIS/FCC", "description": "VÃNH GÕ TÕ LAKLANÕ, de Barbara Pettres, Flávia Person e Walderes Coctá Priprá, 24 min; LUCI E A TERRA, de Kátia Klock, 19 min; PANORAMA, de Djuly Gava e Daniel Leão, 18 min", "curadoria": null, "origin": null, "type": "screening", "price": null },
+        { "timeStart": "17h", "timeEnd": null, "title": "MOSTRA FAM FLORIANÓPOLIS AUDIOVISUAL MERCOSUL", "description": "LAS CENIZAS ESTÁN QUEMANDO, de Lucas Leônidas, 24min (16 anos); O SONHO DE ANU, de Vanessa Kypá, 17 min; TRAVESSIA, de Karol Felicio, 15 min", "curadoria": null, "origin": null, "type": "screening", "price": null },
+        { "timeStart": "18h", "timeEnd": null, "title": "MOSTRA FILMES DE APARTAMENTO", "description": "ABRAÇOS, de Barcabogante, 10 min; O ÚLTIMO É A MULHER DO PADRE, de Yasser Socarrás, 15 min; TE DESPERTO, de Cameron Venture, 20 min; ABECÊ, de Cleo Rosa, 22 min", "curadoria": null, "origin": null, "type": "screening", "price": null },
+        { "timeStart": "19h30", "timeEnd": null, "title": "MOSTRA FESTIVAL LATINO AMERICANO DE CINEMA AMBIENTAL FLACA", "description": "PEDRA VERMELHA, de Cassemiro Vitorino e Ilka Goldschmidt, 97 min", "curadoria": null, "origin": null, "type": "screening", "price": null }
+      ]
+    },
+    {
+      "name": "MASC - CIC",
+      "address": "Centro Integrado de Cultura - Av. Gov. Irineu Bornhausen, 5600 - Agronômica",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "10h", "timeEnd": "21h", "title": "EXPOSIÇÃO VIAGEM À AURORA DO MUNDO", "description": "de Celaine Refosco", "curadoria": "Fran Favero", "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "10h", "timeEnd": "21h", "title": "EXPOSIÇÃO TERRITÓRIOS [IM]PERMANENTES", "description": null, "curadoria": "Maria Helena Rosa Barbosa e Álvaro Henrique Fieri", "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "10h", "timeEnd": "21h", "title": "EXPOSIÇÃO DA POTÊNCIA IMAGÉTICA DA CIDADE — ACERVO MASC EM DIÁLOGO", "description": null, "curadoria": "Maria Helena Rosa Barbosa", "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "10h", "timeEnd": "21h", "title": "EXPOSIÇÃO COLETIVA ENTRE O TECIDO URBANO E AS IMAGINAÇÕES COSTEIRAS", "description": null, "curadoria": "Kamilla Nunes", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "A. GALERIA — PASSEIO PRIMAVERA",
+      "address": "SC-401, km 4, 4150 - Saco Grande",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "11h30", "timeEnd": "12h10", "title": "BOI DE MAMÃO ALIVANTA MEU BOI", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null }
+      ]
+    },
+    {
+      "name": "CENTRO CULTURAL BENTO SILVÉRIO",
+      "address": "Rua Henrique Veras do Nascimento, 50 - Lagoa da Conceição",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "13h", "timeEnd": "18h", "title": "EXPOSIÇÃO FRAGMENTOS DO ÍNTIMO: MESAS DE CABECEIRA", "description": null, "curadoria": "Andréa Figueiredo Leão Grants, Roberta Moraes de Bem e Thayse Hingst", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "FUNDAÇÃO HASSIS",
+      "address": "Rua Luiz da Costa Freysleben, 87 - Itaguaçu",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "13h30", "timeEnd": "17h", "title": "EXPOSIÇÃO HASSIS: O ATELIÊ E A CRIAÇÃO SEM LIMITES", "description": null, "curadoria": "Monique Fonseca", "origin": null, "type": "exhibition", "price": null },
+        { "timeStart": "13h30", "timeEnd": "17h", "title": "EXPOSIÇÃO ARTEPOEMA", "description": null, "curadoria": "Monique Fonseca", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "ATELIÊ 389",
+      "address": "Av. Hercílio Luz, 389 - Centro",
+      "classification": "18 anos",
+      "section": "principal",
+      "events": [
+        { "timeStart": "19h", "timeEnd": "2h", "title": "EXPOSIÇÃO COLETIVA DELAS", "description": null, "curadoria": "Letícia Novelletto", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "BOROGODÓ DA ILHA",
+      "address": "Jardim Pref. Olívio Amorim, 150 - Centro",
+      "classification": "livre",
+      "section": "principal",
+      "events": [
+        { "timeStart": "19h", "timeEnd": null, "title": "JULIA MARIA E JULIANA D PASSOS", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": null }
+      ]
+    },
+    {
+      "name": "BUGIO CENTRO",
+      "address": "Victor Meirelles, 112 - Centro",
+      "classification": "18 anos",
+      "section": "principal",
+      "events": [
+        { "timeStart": "16h", "timeEnd": null, "title": "TAHIRA", "description": null, "curadoria": null, "origin": "São Paulo/SP", "type": "show", "price": null },
+        { "timeStart": "22h", "timeEnd": null, "title": "O MENESTREL DA LHA: VALDIR AGOSTINHO", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": null }
+      ]
+    },
+    {
+      "name": "MOOCHACHO",
+      "address": "Rua Des. Vítor Lima, 498 - Trindade",
+      "classification": "livre",
+      "section": "eventos_parceiros",
+      "events": [
+        { "timeStart": "11h", "timeEnd": "23h", "title": "EXPOSIÇÃO SKATE ART", "description": "de Dimmer, Gabriela Olivia, Jefsu, João Aguiar, Macaco, Marcelo Camacho, Nadyne Garcia, Roberta Bridi, Rodrigo Levél, Rodrigo Rizo e Wagner Kuroiwa", "curadoria": "Juliano Zanotelli", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "9ª MOSTRA TRAÇO DE BOLSO",
+      "address": "Praça Bento Silvério - Lagoa da Conceição",
+      "classification": "livre",
+      "section": "eventos_parceiros",
+      "events": [
+        { "timeStart": "15h", "timeEnd": null, "title": "COWBOY FORA DA LEI", "description": "Lona Azul Produções Artísticas", "curadoria": null, "origin": "São José/SC", "type": "performance", "price": null },
+        { "timeStart": "17h", "timeEnd": null, "title": "CIRCO DE LOS PIES", "description": "La Luna Cia. de Teatro", "curadoria": null, "origin": "Canelinha/SC", "type": "performance", "price": null }
+      ]
+    },
+    {
+      "name": "MARATONINHA",
+      "address": "Parque da Luz - Centro",
+      "classification": "livre",
+      "section": "eventos_parceiros",
+      "events": [
+        { "timeStart": "10h", "timeEnd": "17h", "title": "PROJETO TAMAR", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "other", "price": null },
+        { "timeStart": "10h", "timeEnd": "17h", "title": "MEDIAÇÃO DE LEITURA", "description": "Cia. Mafagafos", "curadoria": null, "origin": "Florianópolis/SC", "type": "other", "price": null },
+        { "timeStart": "10h", "timeEnd": "17h", "title": "MEU BOIZINHO", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null },
+        { "timeStart": "10h", "timeEnd": "17h", "title": "QUINTAL DO BRINCAR — SESC", "description": null, "curadoria": null, "origin": null, "type": "other", "price": null },
+        { "timeStart": "10h", "timeEnd": "17h", "title": "RECREAÇÃO CRIATIVO CULTURAL", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "other", "price": null },
+        { "timeStart": "10h", "timeEnd": null, "title": "OFICINA BRINCANDO COM A NATUREZA DO PARQUE DA LUZ", "description": "Naturescer e AAPluz", "curadoria": null, "origin": "Florianópolis/SC", "type": "workshop", "price": null },
+        { "timeStart": "10h", "timeEnd": null, "title": "TOUR CULTURAL PARA CRIANÇAS: CENTENÁRIO DA PONTE HERCÍLIO LUZ", "description": "Ponto de partida: ao lado do palco. 30 vagas", "curadoria": null, "origin": null, "type": "other", "price": null },
+        { "timeStart": "11h", "timeEnd": null, "title": "BOI DE MAMÃO BRINCA MEU BOI", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null },
+        { "timeStart": "13h", "timeEnd": null, "title": "MOSTRA DE TEATRO LAMBE-LAMBE", "description": "Coletivo Ixpia", "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null },
+        { "timeStart": "14h", "timeEnd": null, "title": "YETI, O AMIGÁVEL MONSTRO PELUDO", "description": "Cia. Peregrina", "curadoria": null, "origin": "Florianópolis/SC", "type": "performance", "price": null },
+        { "timeStart": "14h", "timeEnd": null, "title": "OFICINA DE COMPOSTAGEM: A VIDA É UMA ARTE", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "workshop", "price": null },
+        { "timeStart": "14h", "timeEnd": null, "title": "VIVÊNCIA COM REDONDAMENTE PALHAÇAS", "description": "Palhaças Bolota Terezinha e NelSom. 20 vagas", "curadoria": null, "origin": "Florianópolis/SC", "type": "other", "price": null },
+        { "timeStart": "15h", "timeEnd": null, "title": "FAIXA DE GRAÇA", "description": "Grupos Ritornelo e Off-Sina", "curadoria": null, "origin": "RS e RJ", "type": "performance", "price": null },
+        { "timeStart": "16h", "timeEnd": null, "title": "DJ BARBARELLA", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": null },
+        { "timeStart": "17h", "timeEnd": null, "title": "ADRIANA CALCANHOTTO É PARTIMPIM: O QUARTO NO PALCO", "description": null, "curadoria": null, "origin": "Rio de Janeiro/RJ", "type": "show", "price": null }
+      ]
+    },
+    {
+      "name": "GALERIA LAMA",
+      "address": "Rua João Pinto, 198 - Centro",
+      "classification": "18 anos",
+      "section": "programacao_off",
+      "events": [
+        { "timeStart": "18h", "timeEnd": "0h", "title": "EXPOSIÇÃO ALÉM VERSO", "description": "de Fê Luz", "curadoria": null, "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "BUGIO TRINDADE",
+      "address": "Sv. Cristiano Vanderlei Faria, 25 - Trindade",
+      "classification": "livre",
+      "section": "programacao_off",
+      "events": [
+        { "timeStart": "20h", "timeEnd": null, "title": "RODA DE CHORO BUGIO", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": "colaborativo (sugestão: R$ 20)" }
+      ]
+    },
+    {
+      "name": "BOTECO ZÉ MANÉ",
+      "address": "Rua Desembargador Pedro Silva, 2360 – Coqueiros",
+      "classification": "livre",
+      "section": "programacao_off",
+      "events": [
+        { "timeStart": "13h", "timeEnd": null, "title": "RODA DE CHORO", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": "R$ 15" }
+      ]
+    },
+    {
+      "name": "LUZ INSTALAÇÃO BAR",
+      "address": "Rua Antônio (Nico) Luz, 211 - Centro",
+      "classification": "18 anos",
+      "section": "programacao_off",
+      "events": [
+        { "timeStart": "18h", "timeEnd": "0h", "title": "EXPOSIÇÃO UM LUGAR PARA FAZER MORADA", "description": "de Maristela Müller", "curadoria": null, "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "CASA ODARA QUILOMBO URBANO CULTURAL",
+      "address": "Rua João Pinto, 111 - Centro",
+      "classification": "18 anos",
+      "section": "programacao_off",
+      "events": [
+        { "timeStart": "19h30", "timeEnd": null, "title": "OFICINA CAPOEIRA DE ANGOLA PARA TODES COM MENESTREL ISIS DOS ANGOLEIROS DO SERTÃO", "description": null, "curadoria": null, "origin": "Feira de Santana/BA", "type": "workshop", "price": "colaborativo" }
+      ]
+    },
+    {
+      "name": "PONTO. BAR & PIADINA",
+      "address": "Rua Victor Meirelles, 138 - Centro",
+      "classification": "18 anos",
+      "section": "programacao_off",
+      "events": [
+        { "timeStart": "18h", "timeEnd": "0h", "title": "EXPOSIÇÃO COLETIVA GESTOS MÍNIMOS PARA SE COMEÇAR UMA GUERRA", "description": null, "curadoria": "Bruna Granucci, Georgia Bergamin e Victoria Beatriz", "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "CANDIEIRO",
+      "address": "Rua Pau de Canela, 68 - Rio Tavares",
+      "classification": "18 anos",
+      "section": "programacao_off",
+      "events": [
+        { "timeStart": "19h30", "timeEnd": null, "title": "SAMBA INFORMAL DE RUA", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": "colaborativo" }
+      ]
+    },
+    {
+      "name": "MULTI OPEN SHOPPING",
+      "address": "Rod. Dr. Antônio Luiz Moura Gonzaga, 3339 - Rio Tavares",
+      "classification": "livre",
+      "section": "programacao_off",
+      "events": [
+        { "timeStart": "10h", "timeEnd": "22h", "title": "EXPOSIÇÃO PONTE HERCÍLIO LUZ: A VELHA SENHORA FAZ 100 ANOS", "description": "de Mara Freire e Ronaldo Andrade", "curadoria": null, "origin": null, "type": "exhibition", "price": null }
+      ]
+    },
+    {
+      "name": "SAPATECO BAR & CULTURA",
+      "address": "SC-405, km 5 - 2800 - Campeche",
+      "classification": "18 anos",
+      "section": "programacao_off",
+      "events": [
+        { "timeStart": "20h", "timeEnd": null, "title": "SAMBA DA TRABALHADORA COM SAMBA DE BENGUELA E DJ TÁGUA", "description": null, "curadoria": null, "origin": "Florianópolis/SC", "type": "show", "price": "a partir de R$ 7" }
+      ]
+    }
+  ],
+  "feiras": [
+    { "name": "FEIRA DAS ALFAIAS", "address": "Praça Roldão da Rocha Pires - Santo Antônio de Lisboa", "timeStart": "8h", "timeEnd": "22h" },
+    { "name": "FEIRA DE SANTO ANTÔNIO DE LISBOA", "address": "Praça Getúlio Vargas - Santo Antônio de Lisboa", "timeStart": "8h", "timeEnd": "22h" },
+    { "name": "PARQUE DE COQUEIROS", "address": "Av. Engenheiro Max de Souza", "timeStart": "9h", "timeEnd": "19h" },
+    { "name": "FEIRA DOS IMIGRANTES", "address": "Beira-Mar Norte - Bolsão da Casan", "timeStart": "9h", "timeEnd": "20h" },
+    { "name": "FEIRA RONALDO DE SÁ", "address": "Cabeceira insular da Ponte Hercílio Luz", "timeStart": "9h", "timeEnd": "21h" },
+    { "name": "FEIRARTE", "address": "Beira-Mar Norte - Trapiche", "timeStart": "9h", "timeEnd": "22h" },
+    { "name": "FEIRA INCLUSIVA", "address": "Beira-Mar Norte - Bolsão do Koxixos", "timeStart": "9h", "timeEnd": "22h" },
+    { "name": "FEIRA MARATONA CULTURAL", "address": "Praça XV de Novembro", "timeStart": "11h", "timeEnd": "19h" },
+    { "name": "BEIRA MAR CONTINENTAL", "address": "Av. Claudio A. Barbosa - Balneário do Estreito", "timeStart": "11h", "timeEnd": "21h" }
+  ]
+}

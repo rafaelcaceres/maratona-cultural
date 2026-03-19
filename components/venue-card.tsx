@@ -1,0 +1,135 @@
+"use client";
+
+import { useState } from "react";
+import { ChevronDown, ChevronUp, MapPin } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { EventCard } from "./event-card";
+import { cn } from "@/lib/utils";
+import type { Doc } from "@/convex/_generated/dataModel";
+
+type Classification =
+  | "livre"
+  | "12 anos"
+  | "14 anos"
+  | "16 anos"
+  | "18 anos";
+
+type Section =
+  | "principal"
+  | "eventos_parceiros"
+  | "programacao_off";
+
+type EventDoc = Doc<"events">;
+
+interface VenueCardProps {
+  venue: Doc<"venues">;
+  events: EventDoc[];
+  defaultOpen?: boolean;
+}
+
+const SECTION_LABELS: Record<Section, string> = {
+  principal: "Principal",
+  eventos_parceiros: "Parceiro",
+  programacao_off: "Prog. Off",
+};
+
+const SECTION_STYLES: Record<Section, string> = {
+  principal: "border-festival-teal text-festival-teal",
+  eventos_parceiros: "border-festival-gold text-festival-earth",
+  programacao_off: "border-festival-stone text-festival-stone",
+};
+
+const CLASSIFICATION_STYLES: Record<Classification, string> = {
+  livre: "border-festival-teal/50 text-festival-teal",
+  "12 anos": "border-festival-gold/50 text-festival-earth",
+  "14 anos": "border-festival-gold/50 text-festival-earth",
+  "16 anos": "border-festival-terracotta/50 text-festival-terracotta",
+  "18 anos": "border-festival-purple/50 text-festival-purple",
+};
+
+export function VenueCard({ venue, events, defaultOpen = false }: VenueCardProps) {
+  const [open, setOpen] = useState(defaultOpen);
+
+  return (
+    <div className="border border-border bg-card">
+      {/* Venue header */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full text-left"
+        aria-expanded={open}
+      >
+        <div className="flex items-start justify-between gap-4 p-4">
+          <div className="min-w-0 flex-1">
+            {/* Venue name */}
+            <h3
+              className="text-lg leading-tight text-foreground uppercase"
+              style={{
+                fontFamily: "var(--font-bebas-neue)",
+                letterSpacing: "0.05em",
+              }}
+            >
+              {venue.name}
+            </h3>
+
+            {/* Address */}
+            <div className="mt-1 flex items-start gap-1.5 text-xs text-muted-foreground">
+              <MapPin className="mt-0.5 h-3 w-3 shrink-0" />
+              <span>{venue.address}</span>
+            </div>
+
+            {/* Badges */}
+            <div className="mt-2 flex flex-wrap gap-1.5">
+              <span
+                className={cn(
+                  "inline-flex items-center rounded-sm border px-2 py-0.5 text-xs font-semibold uppercase tracking-wider",
+                  SECTION_STYLES[venue.section as Section]
+                )}
+              >
+                {SECTION_LABELS[venue.section as Section]}
+              </span>
+              <span
+                className={cn(
+                  "inline-flex items-center rounded-sm border px-2 py-0.5 text-xs font-semibold uppercase tracking-wider",
+                  CLASSIFICATION_STYLES[venue.classification as Classification]
+                )}
+              >
+                {venue.classification === "livre" ? "Livre" : `+${venue.classification.replace(" anos", "")}`}
+              </span>
+              <span className="inline-flex items-center rounded-sm border border-border px-2 py-0.5 text-xs text-muted-foreground">
+                {events.length} {events.length === 1 ? "evento" : "eventos"}
+              </span>
+            </div>
+          </div>
+
+          {/* Toggle icon */}
+          <div className="shrink-0 text-muted-foreground pt-1">
+            {open ? (
+              <ChevronUp className="h-4 w-4" />
+            ) : (
+              <ChevronDown className="h-4 w-4" />
+            )}
+          </div>
+        </div>
+      </button>
+
+      {/* Events list */}
+      {open && events.length > 0 && (
+        <div className="border-t border-border divide-y divide-border/50">
+          {events.map((event) => (
+            <EventCard
+              key={event._id}
+              timeStart={event.timeStart}
+              timeEnd={event.timeEnd}
+              title={event.title}
+              description={event.description}
+              curadoria={event.curadoria}
+              origin={event.origin}
+              type={event.type}
+              price={event.price}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

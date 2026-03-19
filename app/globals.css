@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Festival palette */
+    --festival-black: oklch(0.12 0.005 260);
+    --festival-cream: oklch(0.97 0.02 85);
+    --festival-terracotta: oklch(0.62 0.16 38);
+    --festival-gold: oklch(0.82 0.15 88);
+    --festival-teal: oklch(0.55 0.13 185);
+    --festival-earth: oklch(0.45 0.06 55);
+    --festival-purple: oklch(0.40 0.15 290);
+    --festival-blue: oklch(0.55 0.20 255);
+    --festival-stone: oklch(0.55 0.02 260);
+
+    /* shadcn semantic */
+    --background: var(--festival-cream);
+    --foreground: var(--festival-black);
+    --card: oklch(1 0 0);
+    --card-foreground: var(--festival-black);
+    --popover: oklch(1 0 0);
+    --popover-foreground: var(--festival-black);
+    --primary: var(--festival-terracotta);
+    --primary-foreground: var(--festival-cream);
+    --secondary: oklch(0.93 0.02 85);
+    --secondary-foreground: var(--festival-black);
+    --muted: oklch(0.93 0.01 85);
+    --muted-foreground: var(--festival-earth);
+    --accent: var(--festival-gold);
+    --accent-foreground: var(--festival-black);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.88 0.02 85);
+    --input: oklch(0.88 0.02 85);
+    --ring: var(--festival-terracotta);
+    --radius: 0.25rem;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Festival custom colors */
+  --color-festival-black: var(--festival-black);
+  --color-festival-cream: var(--festival-cream);
+  --color-festival-terracotta: var(--festival-terracotta);
+  --color-festival-gold: var(--festival-gold);
+  --color-festival-teal: var(--festival-teal);
+  --color-festival-earth: var(--festival-earth);
+  --color-festival-purple: var(--festival-purple);
+  --color-festival-blue: var(--festival-blue);
+  --color-festival-stone: var(--festival-stone);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bebas-neue), var(--font-space-grotesk), system-ui, sans-serif;
+  }
+}
