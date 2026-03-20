@@ -49,7 +49,7 @@ export const searchEvents = query({
   handler: async (ctx, args) => {
     if (!args.queryText.trim()) return [];
 
-    return ctx.db
+    const events = await ctx.db
       .query("events")
       .withSearchIndex("search_title", (q) => {
         let sq = q.search("title", args.queryText);
@@ -57,5 +57,12 @@ export const searchEvents = query({
         return sq;
       })
       .take(30);
+
+    return Promise.all(
+      events.map(async (event) => {
+        const venue = await ctx.db.get(event.venueId);
+        return { ...event, venue };
+      })
+    );
   },
 });

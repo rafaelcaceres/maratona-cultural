@@ -57,6 +57,33 @@ export function FestivalContent() {
       : "skip"
   );
 
+  // Group search results by date → venue, ordered by date ascending
+  const searchByDate = useMemo(() => {
+    if (!searchResults) return null;
+    const sorted = [...searchResults].sort((a, b) => a.date.localeCompare(b.date));
+
+    const dateMap = new Map<string, Map<string, { venue: Doc<"venues"> | null; events: Doc<"events">[] }>>();
+    for (const result of sorted) {
+      const venueKey = result.venueId ?? "no-venue";
+      if (!dateMap.has(result.date)) dateMap.set(result.date, new Map());
+      const venueMap = dateMap.get(result.date)!;
+      const existing = venueMap.get(venueKey);
+      if (existing) {
+        existing.events.push(result);
+      } else {
+        venueMap.set(venueKey, { venue: result.venue ?? null, events: [result] });
+      }
+    }
+
+    return Array.from(dateMap.entries()).map(([date, venueMap]) => ({
+      date,
+      label: new Date(date + "T00:00:00").toLocaleDateString("pt-BR", {
+        weekday: "long", day: "numeric", month: "long",
+      }),
+      venues: Array.from(venueMap.values()),
+    }));
+  }, [searchResults]);
+
   // Group events by venueId
   const eventsByVenue = useMemo(() => {
     const map = new Map<string, Doc<"events">[]>();
@@ -127,26 +154,35 @@ export function FestivalContent() {
             ) : searchResults.length === 0 ? (
               <EmptyState message="Nenhum evento encontrado." />
             ) : (
-              <div className="divide-y divide-border border border-border">
-                {searchResults.map((event) => (
-                  <div key={event._id}>
-                    <div className="px-4 pt-2 text-xs text-muted-foreground font-medium">
-                      {new Date(event.date + "T00:00:00").toLocaleDateString("pt-BR", {
-                        weekday: "short",
-                        day: "numeric",
-                        month: "short",
-                      })}
+              <div className="space-y-8">
+                {searchByDate!.map(({ date, label, venues }) => (
+                  <div key={date}>
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                      {label}
+                    </p>
+                    <div className="space-y-2">
+                      {venues.map(({ venue, events }, i) =>
+                        venue ? (
+                          <VenueCard key={venue._id} venue={venue} events={events} defaultOpen />
+                        ) : (
+                          <div key={`no-venue-${i}`} className="divide-y divide-border border border-border">
+                            {events.map((event) => (
+                              <EventCard
+                                key={event._id}
+                                timeStart={event.timeStart}
+                                timeEnd={event.timeEnd}
+                                title={event.title}
+                                description={event.description}
+                                curadoria={event.curadoria}
+                                origin={event.origin}
+                                type={event.type}
+                                price={event.price}
+                              />
+                            ))}
+                          </div>
+                        )
+                      )}
                     </div>
-                    <EventCard
-                      timeStart={event.timeStart}
-                      timeEnd={event.timeEnd}
-                      title={event.title}
-                      description={event.description}
-                      curadoria={event.curadoria}
-                      origin={event.origin}
-                      type={event.type}
-                      price={event.price}
-                    />
                   </div>
                 ))}
               </div>
