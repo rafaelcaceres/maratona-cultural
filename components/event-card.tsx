@@ -1,3 +1,4 @@
+import { Heart } from "lucide-react";
 import { formatTimeRange } from "@/lib/time";
 import { EventTypeBadge } from "./event-type-badge";
 import { cn } from "@/lib/utils";
@@ -20,6 +21,9 @@ interface EventCardProps {
   type: EventType;
   price?: string | null;
   className?: string;
+  eventId?: string;
+  isFavorite?: boolean;
+  onToggleFavorite?: (eventId: string) => void;
 }
 
 const TYPE_BORDER: Record<EventType, string> = {
@@ -41,6 +45,9 @@ export function EventCard({
   type,
   price,
   className,
+  eventId,
+  isFavorite = false,
+  onToggleFavorite,
 }: EventCardProps) {
   const timeLabel = formatTimeRange(timeStart, timeEnd);
 
@@ -84,12 +91,32 @@ export function EventCard({
         )}
       </div>
 
-      {/* Price */}
-      {price && (
-        <div className="shrink-0">
-          <span className="rounded-sm border border-festival-teal px-2 py-0.5 text-xs text-festival-teal">
-            {price}
-          </span>
+      {/* Price + Favorite */}
+      {(price || (eventId && onToggleFavorite)) && (
+        <div className="shrink-0 flex flex-col items-end gap-1.5">
+          {price && (
+            <span className="rounded-sm border border-festival-teal px-2 py-0.5 text-xs text-festival-teal">
+              {price}
+            </span>
+          )}
+          {eventId && onToggleFavorite && (
+            <button
+              onClick={() => onToggleFavorite(eventId)}
+              aria-label={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+              className="rounded-sm p-1.5 transition-colors hover:bg-muted/50"
+            >
+              <Heart
+                className={cn(
+                  "h-4 w-4 transition-colors",
+                  isFavorite
+                    ? "fill-festival-red text-festival-red"
+                    : "text-muted-foreground hover:text-festival-red"
+                )}
+                fill={isFavorite ? "currentColor" : "none"}
+                strokeWidth={isFavorite ? 0 : 2}
+              />
+            </button>
+          )}
         </div>
       )}
     </div>

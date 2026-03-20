@@ -9,6 +9,9 @@ import { SectionDivider } from "./section-divider";
 import { FeirasSection } from "./feiras-section";
 import { Skeleton } from "./ui/skeleton";
 import { EventCard } from "./event-card";
+import { FavoritesSheet } from "./favorites-sheet";
+import { FavoritesFab } from "./favorites-fab";
+import { useFavorites } from "@/hooks/use-favorites";
 import type { Doc } from "@/convex/_generated/dataModel";
 
 type EventType =
@@ -33,6 +36,10 @@ export function FestivalContent() {
   const [activeSection, setActiveSection] = useState<Section | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [collapsedVenues, setCollapsedVenues] = useState<Set<string>>(new Set());
+  const [favSheetOpen, setFavSheetOpen] = useState(false);
+
+  const { favorites, toggleFavorite, removeFavorite, count: favCount } = useFavorites();
+  const favoritedIds = useMemo(() => new Set(favorites.map((f) => f.eventId)), [favorites]);
 
   // Reset to all open when date changes
   useEffect(() => {
@@ -180,7 +187,15 @@ export function FestivalContent() {
                     <div className="space-y-2">
                       {venues.map(({ venue, events }, i) =>
                         venue ? (
-                          <VenueCard key={venue._id} venue={venue} events={events} open onOpenChange={() => {}} />
+                          <VenueCard
+                            key={venue._id}
+                            venue={venue}
+                            events={events}
+                            open
+                            onOpenChange={() => {}}
+                            favoritedIds={favoritedIds}
+                            onToggleFavorite={toggleFavorite}
+                          />
                         ) : (
                           <div key={`no-venue-${i}`} className="divide-y divide-border border border-border">
                             {events.map((event) => (
@@ -242,6 +257,8 @@ export function FestivalContent() {
                             events={eventsByVenue.get(venue._id) ?? []}
                             open={!collapsedVenues.has(venue._id)}
                             onOpenChange={(o) => handleVenueToggle(venue._id, o)}
+                            favoritedIds={favoritedIds}
+                            onToggleFavorite={toggleFavorite}
                           />
                         ))}
                       </div>
@@ -260,6 +277,14 @@ export function FestivalContent() {
           </>
         )}
       </div>
+
+      <FavoritesFab count={favCount} onClick={() => setFavSheetOpen(true)} />
+      <FavoritesSheet
+        open={favSheetOpen}
+        onOpenChange={setFavSheetOpen}
+        favorites={favorites}
+        onRemove={removeFavorite}
+      />
     </div>
   );
 }

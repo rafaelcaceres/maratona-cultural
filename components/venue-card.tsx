@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { EventCard } from "./event-card";
 import { cn } from "@/lib/utils";
 import type { Doc } from "@/convex/_generated/dataModel";
+import type { FavoriteItem } from "@/hooks/use-favorites";
 
 type Classification =
   | "livre"
@@ -25,6 +26,8 @@ interface VenueCardProps {
   events: EventDoc[];
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  favoritedIds?: Set<string>;
+  onToggleFavorite?: (item: FavoriteItem) => void;
 }
 
 const SECTION_LABELS: Record<Section, string> = {
@@ -59,7 +62,7 @@ const CLASSIFICATION_STYLES: Record<Classification, string> = {
   "18 anos": "border-festival-purple/50 text-festival-purple",
 };
 
-export function VenueCard({ venue, events, open, onOpenChange }: VenueCardProps) {
+export function VenueCard({ venue, events, open, onOpenChange, favoritedIds, onToggleFavorite }: VenueCardProps) {
   const section = venue.section as Section;
   const classification = venue.classification as Classification;
 
@@ -124,6 +127,24 @@ export function VenueCard({ venue, events, open, onOpenChange }: VenueCardProps)
                     origin={event.origin}
                     type={event.type}
                     price={event.price}
+                    eventId={event._id}
+                    isFavorite={favoritedIds?.has(event._id)}
+                    onToggleFavorite={
+                      onToggleFavorite
+                        ? (eventId) =>
+                            onToggleFavorite({
+                              eventId,
+                              title: event.title,
+                              type: event.type,
+                              date: event.date,
+                              timeStart: event.timeStart,
+                              timeEnd: event.timeEnd,
+                              price: event.price,
+                              venueName: venue.name,
+                              venueAddress: venue.address,
+                            })
+                        : undefined
+                    }
                   />
                 ))}
               </div>
