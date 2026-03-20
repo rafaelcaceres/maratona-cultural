@@ -37,7 +37,7 @@ export function Footer() {
               letterSpacing: "0.02em",
             }}
           >
-            28ª Maratona Cultural
+            Maratona Cultural 2026
           </h2>
           <p className="text-xs text-white/30 tracking-widest uppercase">
             20 — 23 de Março

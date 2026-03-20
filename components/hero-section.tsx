@@ -91,7 +91,7 @@ export function HeroSection() {
               className="text-2xl text-festival-cream"
               style={{ fontFamily: "var(--font-bebas-neue)" }}
             >
-              28ª Maratona Cultural
+              Maratona Cultural 2026
             </p>
           </div>
           <div className="h-8 w-px bg-white/20" />

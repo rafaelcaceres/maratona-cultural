@@ -17,9 +17,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Maratona de Arte e Cultura · Florianópolis 2026",
+  title: "Maratona Cultural · Florianópolis 2026 · Não Oficial ",
   description:
-    "Programação completa da 28ª Maratona de Arte e Cultura de Florianópolis — 20 a 23 de março de 2026.",
+    "Programação completa da Maratona Cultural Florianópolis — 20 a 23 de março de 2026.",
 };
 
 export default function RootLayout({
