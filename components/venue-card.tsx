@@ -86,7 +86,14 @@ export function VenueCard({ venue, events, open, onOpenChange, favoritedIds, onT
 
               <div className="mt-1 flex items-start gap-1.5 text-xs text-muted-foreground">
                 <MapPin className="mt-0.5 h-3 w-3 shrink-0" />
-                <span>{venue.address}</span>
+                <a
+                  href={`https://maps.google.com/?q=${encodeURIComponent(venue.address)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  {venue.address}
+                </a>
               </div>
 
               <div className="mt-2 flex flex-wrap gap-1.5">

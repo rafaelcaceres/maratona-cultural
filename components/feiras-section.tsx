@@ -39,7 +39,14 @@ export function FeirasSection({ feiras }: FeirasSectionProps) {
             <div className="mt-1.5 flex flex-col gap-0.5">
               <div className="flex items-start gap-1.5 text-xs text-muted-foreground">
                 <MapPin className="mt-0.5 h-3 w-3 shrink-0" />
-                <span>{feira.address}</span>
+                <a
+                  href={`https://maps.google.com/?q=${encodeURIComponent(feira.address)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  {feira.address}
+                </a>
               </div>
               <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                 <Clock className="h-3 w-3 shrink-0" />

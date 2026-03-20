@@ -75,7 +75,14 @@ export default function VenuePage({
 
         <div className="mt-3 flex items-start gap-2 text-sm text-festival-earth">
           <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
-          <span>{venue.address}</span>
+          <a
+            href={`https://maps.google.com/?q=${encodeURIComponent(venue.address)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            {venue.address}
+          </a>
         </div>
 
         <div className="mt-4 flex gap-2 text-xs uppercase tracking-wider">
