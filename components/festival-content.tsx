@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { FilterBar } from "./filter-bar";
@@ -32,6 +32,21 @@ export function FestivalContent() {
   const [activeType, setActiveType] = useState<EventType | null>(null);
   const [activeSection, setActiveSection] = useState<Section | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [collapsedVenues, setCollapsedVenues] = useState<Set<string>>(new Set());
+
+  // Reset to all open when date changes
+  useEffect(() => {
+    setCollapsedVenues(new Set());
+  }, [activeDate]);
+
+  const handleVenueToggle = useCallback((venueId: string, open: boolean) => {
+    setCollapsedVenues((prev) => {
+      const next = new Set(prev);
+      if (open) next.delete(venueId);
+      else next.add(venueId);
+      return next;
+    });
+  }, []);
 
   // Fetch venues
   const allVenues = useQuery(api.venues.listByDate, {
@@ -124,6 +139,8 @@ export function FestivalContent() {
     return grouped;
   }, [allVenues, allEvents, activeSection, activeType]);
 
+  const allCollapsed = !!allVenues?.length && allVenues.every((v) => collapsedVenues.has(v._id));
+
   const isLoading = allVenues === undefined || allEvents === undefined;
   const isSearchMode = searchQuery.trim().length >= 2;
 
@@ -163,7 +180,7 @@ export function FestivalContent() {
                     <div className="space-y-2">
                       {venues.map(({ venue, events }, i) =>
                         venue ? (
-                          <VenueCard key={venue._id} venue={venue} events={events} defaultOpen />
+                          <VenueCard key={venue._id} venue={venue} events={events} open onOpenChange={() => {}} />
                         ) : (
                           <div key={`no-venue-${i}`} className="divide-y divide-border border border-border">
                             {events.map((event) => (
@@ -197,6 +214,20 @@ export function FestivalContent() {
               <LoadingSkeleton />
             ) : venuesBySection && venuesBySection.size > 0 ? (
               <div className="space-y-8">
+                {/* Expand / Collapse all */}
+                <div className="flex justify-end">
+                  <button
+                    onClick={() =>
+                      allCollapsed
+                        ? setCollapsedVenues(new Set())
+                        : setCollapsedVenues(new Set(allVenues!.map((v) => v._id)))
+                    }
+                    className="text-xs text-muted-foreground underline-offset-2 hover:underline"
+                  >
+                    {allCollapsed ? "Expandir tudo" : "Colapsar tudo"}
+                  </button>
+                </div>
+
                 {SECTION_ORDER.map((section) => {
                   const venues = venuesBySection.get(section);
                   if (!venues || venues.length === 0) return null;
@@ -209,6 +240,8 @@ export function FestivalContent() {
                             key={venue._id}
                             venue={venue}
                             events={eventsByVenue.get(venue._id) ?? []}
+                            open={!collapsedVenues.has(venue._id)}
+                            onOpenChange={(o) => handleVenueToggle(venue._id, o)}
                           />
                         ))}
                       </div>

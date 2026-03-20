@@ -57,7 +57,7 @@ export function Footer() {
             className="text-xs uppercase tracking-[0.2em] text-white/40"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
-            feito pela
+            site não oficial, feito pela
           </p>
           <a
             href="https://taller.net.br/"
