@@ -9,7 +9,8 @@
     --festival-gold: oklch(0.82 0.15 88);
     --festival-teal: oklch(0.55 0.13 185);
     --festival-earth: oklch(0.45 0.06 55);
-    --festival-purple: oklch(0.40 0.15 290);
+    --festival-purple: oklch(0.38 0.22 295);
+    --festival-red: oklch(0.50 0.22 25);
     --festival-blue: oklch(0.55 0.20 255);
     --festival-stone: oklch(0.55 0.02 260);
 
@@ -68,6 +69,7 @@
   --color-festival-teal: var(--festival-teal);
   --color-festival-earth: var(--festival-earth);
   --color-festival-purple: var(--festival-purple);
+  --color-festival-red: var(--festival-red);
   --color-festival-blue: var(--festival-blue);
   --color-festival-stone: var(--festival-stone);
 }

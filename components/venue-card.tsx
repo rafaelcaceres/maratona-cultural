@@ -34,9 +34,21 @@ const SECTION_LABELS: Record<Section, string> = {
 };
 
 const SECTION_STYLES: Record<Section, string> = {
-  principal: "border-festival-teal text-festival-teal",
+  principal: "border-festival-red text-festival-red",
   eventos_parceiros: "border-festival-gold text-festival-earth",
   programacao_off: "border-festival-stone text-festival-stone",
+};
+
+const SECTION_TOP_BORDER: Record<Section, string> = {
+  principal: "border-t-2 border-t-festival-red",
+  eventos_parceiros: "border-t-2 border-t-festival-gold",
+  programacao_off: "border-t-2 border-t-festival-stone",
+};
+
+const VENUE_NAME_COLOR: Record<Section, string> = {
+  principal: "text-festival-red",
+  eventos_parceiros: "text-foreground",
+  programacao_off: "text-foreground",
 };
 
 const CLASSIFICATION_STYLES: Record<Classification, string> = {
@@ -51,7 +63,7 @@ export function VenueCard({ venue, events, defaultOpen = false }: VenueCardProps
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="border border-border bg-card">
+    <div className={cn("border border-border bg-card", SECTION_TOP_BORDER[venue.section as Section])}>
       {/* Venue header */}
       <button
         onClick={() => setOpen(!open)}
@@ -62,7 +74,7 @@ export function VenueCard({ venue, events, defaultOpen = false }: VenueCardProps
           <div className="min-w-0 flex-1">
             {/* Venue name */}
             <h3
-              className="text-lg leading-tight text-foreground uppercase"
+              className={cn("text-lg leading-tight uppercase", VENUE_NAME_COLOR[venue.section as Section])}
               style={{
                 fontFamily: "var(--font-bebas-neue)",
                 letterSpacing: "0.05em",

@@ -49,11 +49,11 @@ export function FestivalContent() {
     date: activeDate,
   });
 
-  // Search results (only when query is set)
+  // Search results (only when query is set) — sem filtro de data para buscar em todos os dias
   const searchResults = useQuery(
     api.events.searchEvents,
     searchQuery.trim().length >= 2
-      ? { queryText: searchQuery, date: activeDate }
+      ? { queryText: searchQuery }
       : "skip"
   );
 
@@ -129,17 +129,25 @@ export function FestivalContent() {
             ) : (
               <div className="divide-y divide-border border border-border">
                 {searchResults.map((event) => (
-                  <EventCard
-                    key={event._id}
-                    timeStart={event.timeStart}
-                    timeEnd={event.timeEnd}
-                    title={event.title}
-                    description={event.description}
-                    curadoria={event.curadoria}
-                    origin={event.origin}
-                    type={event.type}
-                    price={event.price}
-                  />
+                  <div key={event._id}>
+                    <div className="px-4 pt-2 text-xs text-muted-foreground font-medium">
+                      {new Date(event.date + "T00:00:00").toLocaleDateString("pt-BR", {
+                        weekday: "short",
+                        day: "numeric",
+                        month: "short",
+                      })}
+                    </div>
+                    <EventCard
+                      timeStart={event.timeStart}
+                      timeEnd={event.timeEnd}
+                      title={event.title}
+                      description={event.description}
+                      curadoria={event.curadoria}
+                      origin={event.origin}
+                      type={event.type}
+                      price={event.price}
+                    />
+                  </div>
                 ))}
               </div>
             )}
