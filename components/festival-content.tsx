@@ -37,6 +37,7 @@ export function FestivalContent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [collapsedVenues, setCollapsedVenues] = useState<Set<string>>(new Set());
   const [favSheetOpen, setFavSheetOpen] = useState(false);
+  const [isChangingDate, setIsChangingDate] = useState(false);
 
   const { favorites, toggleFavorite, removeFavorite, count: favCount } = useFavorites();
   const favoritedIds = useMemo(() => new Set(favorites.map((f) => f.eventId)), [favorites]);
@@ -65,6 +66,13 @@ export function FestivalContent() {
     date: activeDate,
     type: activeType ?? undefined,
   });
+
+  // Clear loading state once data for the new date arrives
+  useEffect(() => {
+    if (isChangingDate && allVenues !== undefined && allEvents !== undefined) {
+      setIsChangingDate(false);
+    }
+  }, [isChangingDate, allVenues, allEvents]);
 
   // Fetch feiras
   const feiras = useQuery(api.feiras.listByDate, {
@@ -148,14 +156,19 @@ export function FestivalContent() {
 
   const allCollapsed = !!allVenues?.length && allVenues.every((v) => collapsedVenues.has(v._id));
 
-  const isLoading = allVenues === undefined || allEvents === undefined;
+  const isLoading = allVenues === undefined || allEvents === undefined || isChangingDate;
   const isSearchMode = searchQuery.trim().length >= 2;
 
   return (
     <div>
       <FilterBar
         activeDate={activeDate}
-        onDateChange={setActiveDate}
+        onDateChange={(date) => {
+          if (date !== activeDate) {
+            setIsChangingDate(true);
+            setActiveDate(date);
+          }
+        }}
         activeType={activeType}
         onTypeChange={setActiveType}
         activeSection={activeSection}
@@ -291,14 +304,44 @@ export function FestivalContent() {
 
 function LoadingSkeleton() {
   return (
-    <div className="space-y-4">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <div key={i} className="border border-border p-4 space-y-2">
-          <Skeleton className="h-5 w-48" />
-          <Skeleton className="h-3 w-72" />
-          <Skeleton className="h-3 w-24" />
-        </div>
-      ))}
+    <div className="space-y-8">
+      {/* Section divider skeleton */}
+      <div className="flex items-center gap-3">
+        <Skeleton className="h-4 w-4 rounded-none" />
+        <Skeleton className="h-4 w-32 rounded-none" />
+        <div className="flex-1 h-px bg-border" />
+        <Skeleton className="h-3 w-12 rounded-none" />
+      </div>
+
+      {/* Venue cards skeleton */}
+      <div className="space-y-2">
+        {Array.from({ length: 4 }).map((_, i) => (
+          <div key={i} className="border border-border">
+            <div className="flex items-center justify-between px-4 py-3">
+              <div className="space-y-1.5 flex-1">
+                <Skeleton className="h-5 w-48 rounded-none" />
+                <Skeleton className="h-3 w-64 rounded-none" />
+              </div>
+              <Skeleton className="h-4 w-4 rounded-none ml-4 shrink-0" />
+            </div>
+            {/* Expanded events preview for first card */}
+            {i === 0 && (
+              <div className="border-t border-border divide-y divide-border">
+                {Array.from({ length: 3 }).map((_, j) => (
+                  <div key={j} className="flex items-start gap-3 px-4 py-3">
+                    <Skeleton className="h-6 w-12 rounded-none shrink-0" />
+                    <div className="flex-1 space-y-1.5">
+                      <Skeleton className="h-4 w-40 rounded-none" />
+                      <Skeleton className="h-3 w-56 rounded-none" />
+                    </div>
+                    <Skeleton className="h-4 w-10 rounded-none shrink-0" />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
