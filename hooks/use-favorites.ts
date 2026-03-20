@@ -75,6 +75,15 @@ export function useFavorites() {
         } catch {
           // ignore
         }
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+          window.gtag("event", exists ? "remove_favorite" : "add_favorite", {
+            event_id: item.eventId,
+            event_title: item.title,
+            event_type: item.type,
+            event_date: item.date,
+            venue_name: item.venueName,
+          });
+        }
         return sorted;
       });
     },
@@ -84,11 +93,21 @@ export function useFavorites() {
   const removeFavorite = useCallback(
     (eventId: string) => {
       setFavorites((prev) => {
+        const item = prev.find((f) => f.eventId === eventId);
         const next = prev.filter((f) => f.eventId !== eventId);
         try {
           localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
         } catch {
           // ignore
+        }
+        if (item && typeof window !== "undefined" && typeof window.gtag === "function") {
+          window.gtag("event", "remove_favorite", {
+            event_id: item.eventId,
+            event_title: item.title,
+            event_type: item.type,
+            event_date: item.date,
+            venue_name: item.venueName,
+          });
         }
         return next;
       });
