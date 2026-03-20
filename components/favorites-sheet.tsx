@@ -74,33 +74,33 @@ export function FavoritesSheet({
             </p>
           </div>
         ) : (
-          <div className="divide-y divide-border">
+          <div className="flex flex-col gap-6 p-4">
             {dates.map((date) => (
-              <div key={date}>
+              <div key={date} className="flex flex-col gap-2">
                 <p
-                  className="sticky top-0 z-10 bg-background px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-muted-foreground border-b border-border/50"
+                  className="px-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground"
                 >
                   {DATE_LABELS[date] ?? date}
                 </p>
-                <div className="divide-y divide-border/50">
+                <div className="flex flex-col gap-2">
                   {byDate[date].map((item) => (
-                    <div key={item.eventId} className="relative group">
+                    <div
+                      key={item.eventId}
+                      className="relative group  border border-border bg-card shadow-sm overflow-hidden"
+                    >
                       <EventCard
                         title={item.title}
                         type={item.type}
                         timeStart={item.timeStart}
                         timeEnd={item.timeEnd}
                         price={item.price}
+                        venue={item.venueName ? { name: item.venueName, address: item.venueAddress } : null}
                       />
-                      {/* Venue label */}
-                      <p className="px-4 pb-2 text-xs text-muted-foreground -mt-1">
-                        {item.venueName}
-                      </p>
                       {/* Remove button */}
                       <button
                         onClick={() => onRemove(item.eventId)}
                         aria-label="Remover dos favoritos"
-                        className="absolute right-3 top-3 rounded-sm p-1.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity hover:text-festival-red hover:bg-muted/50"
+                        className="absolute right-2 top-2 rounded-sm p-1.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity hover:text-festival-red hover:bg-muted/50"
                       >
                         <Trash2 className="h-3.5 w-3.5" />
                       </button>

@@ -5,7 +5,7 @@ import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { EventCard } from "@/components/event-card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { MapPin, ArrowLeft } from "lucide-react";
+import { MapPin, ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { timeStringToMinutes } from "@/lib/time";
 
@@ -79,9 +79,10 @@ export default function VenuePage({
             href={`https://maps.google.com/?q=${encodeURIComponent(venue.address)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="flex items-center gap-1 hover:underline"
           >
             {venue.address}
+            <ExternalLink className="h-3 w-3 shrink-0" />
           </a>
         </div>
 

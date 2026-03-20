@@ -1,4 +1,4 @@
-import { Clock, MapPin } from "lucide-react";
+import { Clock, ExternalLink, MapPin } from "lucide-react";
 import type { Doc } from "@/convex/_generated/dataModel";
 
 interface FeirasSectionProps {
@@ -43,9 +43,10 @@ export function FeirasSection({ feiras }: FeirasSectionProps) {
                   href={`https://maps.google.com/?q=${encodeURIComponent(feira.address)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="flex items-center gap-1 hover:underline"
                 >
                   {feira.address}
+                  <ExternalLink className="h-2.5 w-2.5 shrink-0" />
                 </a>
               </div>
               <div className="flex items-center gap-1.5 text-xs text-muted-foreground">

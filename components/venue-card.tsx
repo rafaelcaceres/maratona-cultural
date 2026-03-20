@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { EventCard } from "./event-card";
 import { cn } from "@/lib/utils";
@@ -90,9 +90,10 @@ export function VenueCard({ venue, events, open, onOpenChange, favoritedIds, onT
                   href={`https://maps.google.com/?q=${encodeURIComponent(venue.address)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="flex items-center gap-1 hover:underline"
                 >
                   {venue.address}
+                  <ExternalLink className="h-2.5 w-2.5 shrink-0" />
                 </a>
               </div>
 
